@@ -1,0 +1,25 @@
+{
+  "short_name": "MementoTech",
+  "name": "Web site created for presenting projects made by MementoTech",
+  "icons": [
+    {
+      "src": "logo50.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "logo200.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo520.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
