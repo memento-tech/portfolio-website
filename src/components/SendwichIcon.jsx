@@ -1,6 +1,7 @@
-import styled from "styled-components";
-import CloseIcon from "../icons/CloseIcon";
-import MenuIcon from "../icons/MenuIcon";
+import CloseIcon from "./icons/CloseIcon";
+import MenuIcon from "./icons/MenuIcon";
+
+const { default: styled } = require("styled-components");
 
 function SendwichIcon({ clicked, onClick, color }) {
   return (

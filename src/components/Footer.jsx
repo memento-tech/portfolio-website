@@ -1,76 +1,51 @@
-import { Link } from "react-router";
 import styled from "styled-components";
-import logo from "../assets/logo-white.png";
-import linkedInIcon from "../assets/Linkedin Icon.png";
-import twitterIcon from "../assets/Twitter Icon.png";
-import facebookIcon from "../assets/Facebook Icon.png";
-import hoverCircleImage from "../assets/hoverCircleImage.jpg";
+import linkedInLogo from "../assets/linkedin.png";
+import githubLogo from "../assets/github.png";
+import instagramLogo from "../assets/instagram.png";
+import { Link } from "react-router";
+import mTechLogo from "../assets/m-tech-logo-white-empty.png";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <ColoredContainer>
-        <ContentContainer>
-          <LeftPart>
-            <ReadyTitle>Ready to get started?</ReadyTitle>
-            <KickstartButton>KICKSTART YOUR FUTURE</KickstartButton>
-            <LogoContainer>
-              <Logo src={logo} />
-              <LogoText>Memento Tech</LogoText>
-            </LogoContainer>
-          </LeftPart>
-          <QuickLinksSection>
-            <QuickLinksHeader>Quick Links</QuickLinksHeader>
-            <LinkStyled>Home</LinkStyled>
-            <LinkStyled>Projects</LinkStyled>
-            <LinkStyled>Services</LinkStyled>
-            <LinkStyled>About Us</LinkStyled>
-            <LinkStyled>Contact</LinkStyled>
-            <LinkStyled>Careers</LinkStyled>
-          </QuickLinksSection>
-                  <RightPart>
-                      
-            <SocialNetworkLinkImg src={facebookIcon} />
-            <SocialNetworkLinkImg src={linkedInIcon} />
-            <SocialNetworkLinkImg src={twitterIcon} />
-            <HoverCircle
-              style={{ height: "300px", width: "300px", top: "-120px" }}
+      <FooterContent>
+        <RightSectionFooter>
+          <LinkStyled to={"/"}>
+            <FooterLogo src={mTechLogo} />
+            <LogoTextContainer>
+              <h1>Memento Tech</h1>
+              <h3>Develop with us!</h3>
+            </LogoTextContainer>
+          </LinkStyled>
+        </RightSectionFooter>
+        <LeftSectionFooter>
+          Find us here!
+          <SocialMediaLinks>
+            <a
+              href="https://www.linkedin.com/in/igor--stojanovic"
+              target="_blank"
+              rel="noreferrer"
             >
-              <HoverCircle
-                style={{
-                  height: "290px",
-                  width: "290px",
-                  backgroundColor: "#5093D2",
-                  top: "5px",
-                  left: "5px",
-                }}
-              >
-                <HoverCircle
-                  style={{
-                    height: "272px",
-                    width: "272px",
-                    backgroundColor: "#166ABB",
-                    top: "8px",
-                    left: "8px",
-                  }}
-                >
-                  <HoverCircle
-                    style={{
-                      height: "250px",
-                      width: "250px",
-                      backgroundColor: "#fff",
-                      top: "11px",
-                      left: "11px",
-                    }}
-                  >
-                    <HoverCircleImage src={hoverCircleImage} />
-                  </HoverCircle>
-                </HoverCircle>
-              </HoverCircle>
-            </HoverCircle>
-          </RightPart>
-        </ContentContainer>
-      </ColoredContainer>
+              <SocialMediaLink src={linkedInLogo} />
+            </a>
+            <a
+              href="https://github.com/memento-tech"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SocialMediaLink src={githubLogo} />
+            </a>
+            <a
+              href="https://www.instagram.com/igor____stojanovic/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <SocialMediaLink src={instagramLogo} />
+            </a>
+          </SocialMediaLinks>
+        </LeftSectionFooter>
+      </FooterContent>
+      <Copyright>Copyright &copy; Memento Tech</Copyright>
     </FooterContainer>
   );
 };
@@ -78,130 +53,104 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainer = styled.div`
-  min-height: 500px;
-  width: 100%;
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: linear-gradient(
+    90deg,
+    rgba(47, 69, 129, 0.7665266790309874) 0%,
+    rgba(36, 91, 150, 0.9710084717480743) 45%,
+    rgba(109, 158, 218, 0.906582701439951) 100%
+  );
+
+  border-top: 2px solid white;
+
+  min-height: 300px;
 `;
 
-const ColoredContainer = styled.div`
-  border-top-left-radius: 60%;
-  border-top-right-radius: 60%;
-  height: 100%;
-  width: 200%;
-  background-color: #012f5b;
-  margin-top: 3rem;
-
-  position: absolute;
-  left: -50%;
+const FooterContent = styled.div`
+  flex-grow: 1;
 
   display: flex;
   justify-content: center;
   align-items: center;
-`;
+  width: 80%;
 
-const ContentContainer = styled.div`
-  width: 40%;
-  display: grid;
-  grid-template-columns: 3fr 1fr 3fr;
-`;
-const LeftPart = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-`;
-
-const ReadyTitle = styled.h3`
-  color: #fff;
-  font-size: 35px;
-  margin-left: 1rem;
-  margin-bottom: 1rem;
-`;
-
-const KickstartButton = styled(Link)`
-  background-color: #fce5c0;
-  border-radius: 20px;
-  width: 250px;
-  padding: 0.5rem 0;
-  font-weight: 400;
-  margin-left: 1rem;
-  font-size: 14px;
-
-  &:hover {
-    scale: 1.1;
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
   }
 `;
 
-const LogoContainer = styled.div`
+const Copyright = styled.div`
+  font-size: 12px;
+  margin-bottom: 0.5rem;
+`;
+
+const SocialMediaLinks = styled.div`
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-top: 3rem;
 `;
 
-const Logo = styled.img`
-  height: 150px;
-  width: auto;
-`;
+const SocialMediaLink = styled.img`
+  width: 50px;
+  height: auto;
 
-const LogoText = styled.h3`
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 35px;
-`;
-
-const QuickLinksSection = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const QuickLinksHeader = styled.p`
-  color: #fff;
-`;
-const LinkStyled = styled(Link)`
-  color: #fff;
-  margin-top: 0.5rem;
-
-  &:hover {
-    scale: 1.1;
-  }
-`;
-
-const RightPart = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 3rem;
-  position: relative;
-`;
-
-const SocialNetworkLinkImg = styled.img`
-  width: 40px;
-  height: 40px;
-  margin: 0.5rem;
   cursor: pointer;
-  &:hover {
-    scale: 1.1;
+
+  margin: 1rem;
+`;
+
+const RightSectionFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    margin-bottom: 2rem;
   }
 `;
 
-const HoverCircle = styled.div`
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background-color: #f0f0f0;
-  border-radius: 50%;
-  overflow: hidden;
+const LeftSectionFooter = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
-const HoverCircleImage = styled.img`
-  object-fit: cover;
-  rotate: 20deg;
-  width: 300px;
-  height: 280px;
+const LinkStyled = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
-  transform: translateX(-50px) translateY(10px);
+const LogoTextContainer = styled.div`
+  color: white;
+
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  h3 {
+    font-size: 14px;
+    margin: 0;
+    font-style: italic;
+    text-align: start;
+  }
+`;
+
+const FooterLogo = styled.img`
+  height: 80px;
+  padding-right: 1rem;
 `;
