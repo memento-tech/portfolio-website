@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8f1c244.css",
-    "main.js": "/static/js/main.2abdc22c.js",
-    "static/media/section2Gif.gif": "/static/media/section2Gif.d092f35586b8fa962497.gif",
-    "static/media/section1Gif.png": "/static/media/section1Gif.24c138b95b4255e5f16e.png",
-    "static/media/section4Gif.gif": "/static/media/section4Gif.646f15083f4b973a1bbd.gif",
-    "static/media/section3Gif.gif": "/static/media/section3Gif.3fb26d9b3c3c823ae786.gif",
-    "static/media/m-tech-logo-white-empty.png": "/static/media/m-tech-logo-white-empty.ec8f4a351f61254dc8f9.png",
-    "index.html": "/index.html",
-    "main.b8f1c244.css.map": "/static/css/main.b8f1c244.css.map",
-    "main.2abdc22c.js.map": "/static/js/main.2abdc22c.js.map"
+    "main.css": "/portfolio-website/static/css/main.b8f1c244.css",
+    "main.js": "/portfolio-website/static/js/main.9c2b581f.js",
+    "static/media/section2Gif.gif": "/portfolio-website/static/media/section2Gif.d092f35586b8fa962497.gif",
+    "static/media/section1Gif.png": "/portfolio-website/static/media/section1Gif.24c138b95b4255e5f16e.png",
+    "static/media/section4Gif.gif": "/portfolio-website/static/media/section4Gif.646f15083f4b973a1bbd.gif",
+    "static/media/section3Gif.gif": "/portfolio-website/static/media/section3Gif.3fb26d9b3c3c823ae786.gif",
+    "static/media/m-tech-logo-white-empty.png": "/portfolio-website/static/media/m-tech-logo-white-empty.ec8f4a351f61254dc8f9.png",
+    "index.html": "/portfolio-website/index.html",
+    "main.b8f1c244.css.map": "/portfolio-website/static/css/main.b8f1c244.css.map",
+    "main.9c2b581f.js.map": "/portfolio-website/static/js/main.9c2b581f.js.map"
   },
   "entrypoints": [
     "static/css/main.b8f1c244.css",
-    "static/js/main.2abdc22c.js"
+    "static/js/main.9c2b581f.js"
   ]
 }
