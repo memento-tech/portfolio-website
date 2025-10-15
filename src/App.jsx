@@ -15,7 +15,7 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   return (
     <FullContainer>
-      <BrowserRouter>
+      <HashRouter>
         <ScrollToTop />
         <NavBar />
         <Routes>
@@ -48,7 +48,7 @@ function App() {
           <Route path="/*" element={<ErrorPage />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </FullContainer>
   );
 }
