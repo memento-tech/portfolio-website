@@ -1,6 +1,7 @@
 {
   "version": "1.0.0",
   "private": true,
+  "homepage": "https://memento-tech.github.io/portfolio-website/",
   "dependencies": {
     "@formspree/react": "^2.5.1",
     "github-markdown-css": "^5.8.1",

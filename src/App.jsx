@@ -1,4 +1,4 @@
-import { BrowserRouter, HashRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import LandingPage from "./pages/LandingPage";
 import FullContainer from "./components/FullContainer";
 import NavBar from "./components/NavBar";
